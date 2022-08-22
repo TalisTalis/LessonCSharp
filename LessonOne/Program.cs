@@ -6,9 +6,7 @@ namespace LessonOne
     {
         static void Main(string[] args)
         {
-            int[,] myArray = new int[10, 6];
-
-            Random random = new Random();
+            int[,] myArray = new int[2, 3];            
 
             int heght = myArray.GetLength(0);
 
@@ -18,7 +16,8 @@ namespace LessonOne
             {
                 for (int j = 0; j < width; j++)
                 {
-                    myArray[i, j] = random.Next(100);
+                    
+                    myArray[i, j] = int.Parse(Console.ReadLine());
                 }
             }
 
