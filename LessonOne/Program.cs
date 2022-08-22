@@ -6,7 +6,7 @@ namespace LessonOne
     {
         static void Main(string[] args)
         {
-            int[,] myArray = new int[2, 3];            
+            string[,] myArray = new string[2, 3];            
 
             int heght = myArray.GetLength(0);
 
@@ -17,7 +17,7 @@ namespace LessonOne
                 for (int j = 0; j < width; j++)
                 {
                     
-                    myArray[i, j] = int.Parse(Console.ReadLine());
+                    myArray[i, j] = Console.ReadLine();
                 }
             }
 
