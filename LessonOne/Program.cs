@@ -6,26 +6,28 @@ namespace LessonOne
     {
         static void Main(string[] args)
         {
-            string[,] myArray = new string[2, 3];            
+            int[][] myArray = new int[3][];
 
-            int heght = myArray.GetLength(0);
+            myArray[0] = new int[5];
+            myArray[1] = new int[3];
+            myArray[2] = new int[10];
 
-            int width = myArray.GetLength(1);
+            Random random = new Random();
 
-            for (int i = 0; i < heght; i++)
+            for (int i = 0; i < myArray.Length; i++)
             {
-                for (int j = 0; j < width; j++)
+                for (int j = 0; j < myArray[i].Length; j++)
                 {
-                    
-                    myArray[i, j] = Console.ReadLine();
+
+                    myArray[i][j] = random.Next(100);
                 }
             }
 
-            for (int i = 0; i < heght; i++)
+            for (int i = 0; i < myArray.Length; i++)
             {
-                for (int j = 0; j < width; j++)
+                for (int j = 0; j < myArray[i].Length; j++)
                 {
-                    Console.Write(myArray[i, j] + "\t");
+                    Console.Write(myArray[i][j] + "\t");
                 }
 
                 Console.WriteLine();
