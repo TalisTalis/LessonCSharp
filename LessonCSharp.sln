@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Triangles", "Triangles\Tria
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{4F55383B-CAE9-4FFF-84AA-6346FA9D8A56}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetodOutputString", "MetodOutputString\MetodOutputString.csproj", "{45A22B9D-C525-47FF-A14C-7EEBE4AB1722}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetodSearchIndex", "MetodSearchIndex\MetodSearchIndex.csproj", "{7514616F-6C1E-4766-BE2C-3048F5D8B2A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{4F55383B-CAE9-4FFF-84AA-6346FA9D8A56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F55383B-CAE9-4FFF-84AA-6346FA9D8A56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F55383B-CAE9-4FFF-84AA-6346FA9D8A56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45A22B9D-C525-47FF-A14C-7EEBE4AB1722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45A22B9D-C525-47FF-A14C-7EEBE4AB1722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45A22B9D-C525-47FF-A14C-7EEBE4AB1722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45A22B9D-C525-47FF-A14C-7EEBE4AB1722}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7514616F-6C1E-4766-BE2C-3048F5D8B2A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7514616F-6C1E-4766-BE2C-3048F5D8B2A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7514616F-6C1E-4766-BE2C-3048F5D8B2A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7514616F-6C1E-4766-BE2C-3048F5D8B2A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
