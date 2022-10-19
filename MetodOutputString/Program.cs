@@ -19,21 +19,17 @@ namespace MetodOutputString
 
             Console.Write("Введите количество символов в строке: ");
 
-            int count = int.Parse(Console.ReadLine());
+            uint count = uint.Parse(Console.ReadLine());
 
             OutpuString(str, count);
         }
 
-        static void OutpuString(string str, int count)
+        static void OutpuString(string str, uint count)
         {
-            string result = "";
-
             for (int i = 0; i < count; i++)
             {
-                result += str;
+                Console.Write(str);
             }
-
-            Console.WriteLine(result);
         }
     }
 }
