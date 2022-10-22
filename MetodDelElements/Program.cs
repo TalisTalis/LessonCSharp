@@ -17,50 +17,35 @@ namespace MetodDelElements
 
             int a = 1;
 
-            //DelFirst(ref myArray);\
+            //DelFirst(ref myArray);
 
-            //DelLast(ref myArray);
+            DelLast(ref myArray);
 
-            DelToIndex(ref myArray, a);
+            //DelToIndex(ref myArray, a);
         }
 
         static void DelFirst(ref int[] arr)
         {
-            int[] arr1 = new int[arr.Length - 1];
-
-            for (int i = 0; i < arr1.Length; i++)
-            {
-                arr1[i] = arr[i+1];
-            }
-
-            arr = arr1;
+            DelToIndex(ref arr, 0);
         }
 
         static void DelLast(ref int[] arr)
         {
-            int[] arr1 = new int[arr.Length - 1];
-
-            for (int i = 0; i < arr1.Length; i++)
-            {
-                arr1[i] = arr[i];
-            }
-
-            arr = arr1;
+            DelToIndex(ref arr, arr.Length - 1);
         }
 
         static void DelToIndex(ref int[] arr, int index)
         {
             int[] arr1 = new int[arr.Length - 1];
 
-            for (int i = 0, j = 0; i < arr.Length; i++, j++)
+            for (int i = 0; i < index; i++)
             {
-                if (i == index)
-                {
-                    j--;
-                    continue;
-                }
+                arr1[i] = arr[i];
+            }
 
-                arr1[j] = arr[i];
+            for (int i = index; i < arr1.Length; i++)
+            {
+                arr1[i] = arr[i + 1];
             }
 
             arr = arr1;
