@@ -26,49 +26,28 @@ namespace MetodAddElements
 
         static void AddFirst(ref int[] arr, int value)
         {
-            int[] arr1 = new int[arr.Length + 1];
-
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr1[i+1] = arr[i];
-            }
-
-            arr = arr1;
-
-            arr[0] = value;
+            AddToIndex(ref arr, value, 0);
         }
 
         static void AddLast(ref int[] arr, int value)
         {
+            AddToIndex(ref arr, value, arr.Length);
+        }
+
+        static void AddToIndex(ref int[] arr, int value, int index)
+        {
             int[] arr1 = new int[arr.Length + 1];
 
-            for (int i = 0; i < arr.Length; i++)
+            arr1[index] = value;
+
+            for (int i = 0; i < index; i++)
             {
                 arr1[i] = arr[i];
             }
 
-            arr = arr1; 
-
-            arr[arr.Length - 1] = value;
-
-        }
-
-        static void AddToIndex(ref int[] arr, int index, int value)
-        {
-            int[] arr1 = new int[arr.Length + 1];
-
-            for (int i = 0, j = 0; i < arr1.Length; i++, j++)
+            for (int i = index; i < arr.Length; i++)
             {
-                if (i == index)
-                {
-                    arr1[i] = value;
-
-                    j--;
-
-                    continue;
-                }
-
-                arr1[i] = arr[j];
+                arr1[i + 1] = arr[i];
             }
 
             arr = arr1;

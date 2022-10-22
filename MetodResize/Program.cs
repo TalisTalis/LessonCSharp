@@ -15,20 +15,15 @@ namespace MetodResize
 
             int[] myArray = new int[] {1, 6, 5, 3, 8};
 
-            Resize(ref myArray, 2);
+            Resize(ref myArray, 10);            
         }
 
-        static void Resize (ref int[] arr, int count)
+        static void Resize<T>(ref T[] arr, int newSize)
         {
-            int[] arr1 = new int[count];
+            T[] arr1 = new T[newSize];
 
-            for (int i = 0; i < count; i++)
+            for (int i = 0; i < newSize && i < arr.Length; i++)
             {
-                if (i == arr.Length)
-                {
-                    break;
-                }
-
                 arr1[i] = arr[i];
             }
 
