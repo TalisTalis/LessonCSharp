@@ -19,9 +19,9 @@ namespace MetodDelElements
 
             //DelFirst(ref myArray);
 
-            DelLast(ref myArray);
+            //DelLast(ref myArray);
 
-            //DelToIndex(ref myArray, a);
+            DelToIndex(ref myArray, a);
         }
 
         static void DelFirst(ref int[] arr)
@@ -43,9 +43,9 @@ namespace MetodDelElements
                 arr1[i] = arr[i];
             }
 
-            for (int i = index; i < arr1.Length; i++)
+            for (int i = index + 1; i < arr.Length; i++)
             {
-                arr1[i] = arr[i + 1];
+                arr1[i - 1] = arr[i];
             }
 
             arr = arr1;
