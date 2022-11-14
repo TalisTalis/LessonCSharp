@@ -14,19 +14,17 @@ namespace RecursionOutputArray
 
             int[] arr = { 1, 5, 67, 3, 34 };
 
-            PrintArray(arr, 0);
+            PrintArray(arr);
         }
 
-        static void PrintArray(int[] arr, int i)
+        static void PrintArray(int[] arr, int i = 0)
         {
-            if (i >= arr.Length)
-                return;
+            if (i < arr.Length)
+            {
+                Console.WriteLine(arr[i]);
 
-            Console.WriteLine(arr[i]);
-
-            i++;
-
-            PrintArray(arr, i);
+                PrintArray(arr, i + 1);
+            }
         }
     }
 }

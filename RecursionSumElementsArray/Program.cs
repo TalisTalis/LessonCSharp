@@ -16,21 +16,17 @@ namespace RecursionSumElementsArray
 
             int sum = 0;
 
-            SumElementsArray(arr, ref sum, 0);
+            int result = SumElementsArray(arr);
 
-            Console.WriteLine($"Сумма элементов массива равна {sum}.");
+            Console.WriteLine($"Сумма элементов массива равна {result}.");
         }
 
-        static void SumElementsArray(int[] arr, ref int sum, int i)
+        static int SumElementsArray(int[] arr, int i = 0)
         {
-            if (i == arr.Length)
-                return;
-            
-            sum += arr[i];
+            if (i >= arr.Length)
+                return 0;
 
-            i++;
-
-            SumElementsArray(arr, ref sum, i);
+            return arr[i] + SumElementsArray(arr, i + 1);
         }
     }
 }

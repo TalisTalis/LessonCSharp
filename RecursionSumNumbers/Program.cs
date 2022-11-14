@@ -16,25 +16,17 @@ namespace RecursionSumNumbers
 
             int a = int.Parse(Console.ReadLine());
 
-            int sum = 0;
+            int result = SumDigitNumber(a);
 
-            int numberLength = a.ToString().Length - 1;
-
-            SumDigitNumber(a, ref sum, numberLength);
-
-            Console.WriteLine($"Сумма цифр числа {a} равна {sum}");
+            Console.WriteLine($"Сумма цифр числа {a} равна {result}");
         }
 
-        static void SumDigitNumber(int a, ref int sum, int i)
+        static int SumDigitNumber(int a)
         {
-            if (i < 0)
-                return;
+            if (a < 10)
+                return a;
 
-            sum += (a / (int)Math.Pow(10, i)) % 10;
-
-            i--;
-
-            SumDigitNumber(a, ref sum, i);
+            return a % 10 + SumDigitNumber(a / 10);
         }
     }
 }
